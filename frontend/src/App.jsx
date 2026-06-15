@@ -17,7 +17,7 @@ import Cart from "./pages/Cart";
 import StayDetails from "./pages/StayDetails";
 import Checkout from "./pages/Checkout";
 import Payment from "./pages/Payment";
-import AdminRoute from "./components/AdminRoute";
+import AdminRoute from "./Components/AdminRoute";
 
 function App() {
   return (
