@@ -6,7 +6,6 @@ import baliImg from "../assets/bali.png";
 import kyotoImg from "../assets/kyoto.png";
 import swissImg from "../assets/swiss.png";
 import compassLogo from "../assets/compass.png";
-import HeroVideo from "../assets/HeroVideo.mp4";
 import japan from "../assets/japan.jpg";
 import switzerland from "../assets/switzerland.jpg";
 import turkiye from "../assets/turkiye.jpg";
@@ -14,6 +13,7 @@ import beachImg from "../assets/beach.jpg";
 import adventureImg from "../assets/adventure.jpg";
 import historicalImg from "../assets/historical.jpg";
 import luxuryImg from "../assets/luxury.jpg";
+import HeroImage from"../assets/HeroImage.jpg";
 function Home() {
   const navigate = useNavigate();
 
@@ -258,6 +258,7 @@ const fetchStays = async () => {
       {/* Hero Section */}
      {/* Hero Section */}
 <section
+
   style={{
     width: "100%",
     height: "105vh",
@@ -266,23 +267,22 @@ const fetchStays = async () => {
     marginTop: "0",
   }}
 >
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      zIndex: 0,
-    }}
-  >
-    <source src={heroVideo} type="video/mp4" />
-  </video>
+  <img
+  src={HeroImage}
+  alt="Travel Hero"
+  style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    zIndex: 0,
+  }}
+/>
+  
+    
+  
 
   {/* Dark Overlay */}
   <div
