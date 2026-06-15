@@ -11,7 +11,8 @@ const dashboardRoutes =
   const stayRoutes = require(
   "./routes/stayroute"
 );
-
+const paymentRoutes =
+  require("./routes/paymentroute");
 dotenv.config();
 
 // Connect MongoDB
@@ -29,6 +30,7 @@ app.use("/api/packages", packageroute);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/stays", stayRoutes);
+app.use("/api/payment", paymentRoutes);
 // Test Route
 app.get("/", (req, res) => {
   res.send("Horizon Compass Backend Running");
