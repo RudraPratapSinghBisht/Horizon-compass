@@ -23,7 +23,7 @@ function ManagePackages() {
   const fetchPackages = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/packages"
+        `${import.meta.env.VITE_API_URL}/api/packages`
       );
 
       setPackages(res.data);
@@ -56,14 +56,14 @@ function ManagePackages() {
   try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/api/packages/${editingId}`,
+          `${import.meta.env.VITE_API_URL}/api/packages/${editingId}`,
           formattedPackage
         );
 
         alert("Package Updated Successfully!");
       } else {
         await axios.post(
-          "http://localhost:5000/api/packages",
+          `${import.meta.env.VITE_API_URL}/api/packages`,
           formattedPackage
         );
 
@@ -112,7 +112,7 @@ function ManagePackages() {
   const handleDeletePackage = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/packages/${id}`
+        `${import.meta.env.VITE_API_URL}/api/packages/${id}`
       );
 
       alert("Package Deleted Successfully!");

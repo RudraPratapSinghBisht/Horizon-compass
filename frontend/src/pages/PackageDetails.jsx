@@ -17,7 +17,7 @@ function PackageDetails() {
   const fetchPackage = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/packages/${id}`
+        `${import.meta.env.VITE_API_URL}/api/packages/${id}`
       );
 
       setPkg(res.data);

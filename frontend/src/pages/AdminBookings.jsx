@@ -11,7 +11,7 @@ function AdminBookings() {
   const fetchBookings = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/bookings"
+        `${import.meta.env.VITE_API_URL}/api/bookings`
       );
 
       setBookings(res.data);
@@ -25,7 +25,7 @@ function AdminBookings() {
 ) => {
   try {
     await axios.put(
-      `http://localhost:5000/api/bookings/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/bookings/${id}`,
       {
         status,
       }

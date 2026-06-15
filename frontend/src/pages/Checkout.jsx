@@ -32,7 +32,7 @@ const handlePayment = async () => {
     const firstItem = cartItems[0];
 
     await axios.post(
-      "http://localhost:5000/api/bookings",
+      `${import.meta.env.VITE_API_URL}/api/bookings`,
      {
   packageId: firstItem?._id || "cart",
 

@@ -11,7 +11,7 @@ function ManageUsers() {
   const fetchUsers = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/auth/users"
+        `${import.meta.env.VITE_API_URL}/api/auth/users`
       );
 
       setUsers(res.data);
@@ -22,7 +22,7 @@ function ManageUsers() {
   const makeAdmin = async (id) => {
   try {
     await axios.put(
-      `http://localhost:5000/api/auth/make-admin/${id}`
+      `${import.meta.env.VITE_API_URL}/api/auth/make-admin/${id}`
     );
 
     fetchUsers();

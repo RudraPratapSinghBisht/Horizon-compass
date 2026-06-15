@@ -33,7 +33,7 @@ const [description, setDescription] =
   const fetchStays = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/stays"
+        `${import.meta.env.VITE_API_URL}/api/stays`
       );
 
       setStays(response.data);
@@ -44,7 +44,7 @@ const [description, setDescription] =
   const addStay = async () => {
   try {
     await axios.post(
-      "http://localhost:5000/api/stays",
+      `${import.meta.env.VITE_API_URL}/api/stays`,
       {
         title,
         category,

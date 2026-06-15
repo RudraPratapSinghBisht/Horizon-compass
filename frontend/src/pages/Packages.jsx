@@ -24,7 +24,7 @@ const searchedCity =
 const fetchPackages = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/packages"
+      `${import.meta.env.VITE_API_URL}/api/packages`
     );
 
     setPackages(res.data);

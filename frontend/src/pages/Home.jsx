@@ -88,7 +88,7 @@ const prevPackage = () => {
 const fetchFeaturedPackages = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/packages"
+      `${import.meta.env.VITE_API_URL}/api/packages`
     );
 
     setFeaturedPackages(
@@ -101,7 +101,7 @@ const fetchFeaturedPackages = async () => {
 const fetchStays = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/stays"
+      `${import.meta.env.VITE_API_URL}/api/stays`
     );
 
     setStays(res.data);

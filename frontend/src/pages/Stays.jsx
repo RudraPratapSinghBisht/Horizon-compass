@@ -17,7 +17,7 @@ function Stays() {
   const fetchStays = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/stays"
+        `${import.meta.env.VITE_API_URL}/api/stays`
       );
 
       setStays(res.data);
